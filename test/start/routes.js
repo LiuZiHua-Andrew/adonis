@@ -18,6 +18,6 @@ const Route = use('Route')
 const Helpers = use('Helpers')
 
 Route.on('/').render('welcome')
-Route.get('/front', async({response}) => {
+Route.any('*', async({response}) => {
     return response.download(Helpers.publicPath('client/build/index.html'))
 })

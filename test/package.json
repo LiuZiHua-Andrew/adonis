@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild":"cd public && cd client && npm install && npm run build",
+    "heroku-postbuild": "cd public && cd client && npm install && npm run build",
     "test": "node ace test"
   },
   "keywords": [
@@ -28,6 +28,7 @@
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
     "mysql": "^2.16.0",
+    "react-router-dom": "^4.3.1",
     "url-parse": "^1.4.4"
   },
   "devDependencies": {},
