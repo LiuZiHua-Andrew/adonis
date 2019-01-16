@@ -17,3 +17,6 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+Route.get('/react', async({response}) => {
+    return await readFile('public/client/build/index.html')
+})
