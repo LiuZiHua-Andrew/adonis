@@ -18,6 +18,9 @@ const Route = use('Route')
 const Helpers = use('Helpers')
 
 Route.on('/').render('welcome')
+Route.get('/test', async({response}) => {
+    return response.send('This is test')
+})
 Route.get('/react', async({response}) => {
     return response.download(Helpers.publicPath('client/build/index.html'))
 })
