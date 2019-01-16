@@ -15,6 +15,7 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
+const Helpers = use('Helpers')
 const fs = use('fs')
 const readFile = Helpers.promisify(fs.readFile)
 
