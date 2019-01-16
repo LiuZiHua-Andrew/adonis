@@ -15,6 +15,8 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
+const fs = use('fs')
+const readFile = Helpers.promisify(fs.readFile)
 
 Route.on('/').render('welcome')
 Route.get('/react', async({response}) => {
