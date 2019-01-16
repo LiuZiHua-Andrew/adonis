@@ -16,10 +16,8 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 const Helpers = use('Helpers')
-const fs = use('fs')
-const readFile = Helpers.promisify(fs.readFile)
 
 Route.on('/').render('welcome')
-Route.get('/react', async({response}) => {
-    return await readFile('public/client/build/index.html')
+Route.get('/front', async({response}) => {
+    return response.download(Helpers.publicPath('client/build/index.html'))
 })
