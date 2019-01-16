@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd public && cd client && npm install && npm run build",
+    "heroku-postbuild": "cd public && cd client && npm install",
     "test": "node ace test"
   },
   "keywords": [
